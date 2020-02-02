@@ -68,6 +68,7 @@ import me.sargunvohra.lib.pokekotlin.model.Pokemon;
 import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
 
 public class Example {
+
     public static void main(String[] args) {
         PokeApi pokeApi = new PokeApiClient();
         Pokemon[] pokedex1 = new Pokemon[151];
@@ -123,4 +124,71 @@ public class Example {
 
 
     }
-}
+    public static Pokemon[] getDex(int gen) {
+        PokeApi pokeApi = new PokeApiClient();
+        Pokemon[] safeTest = new Pokemon[1];
+
+
+        switch (gen) {
+            case 1:
+                Pokemon[] pokedex1 = new Pokemon[151];
+                for (int n = 0; n <= 150; n++) {
+                    pokedex1[n] = pokeApi.getPokemon(n + 1);
+//            System.out.println(pokedex1[n]);
+//            System.out.println();
+                }
+                return pokedex1;
+            case 2:
+                Pokemon[] pokedex2 = new Pokemon[100];
+                for (int n = 0; n <= 99; n++) {
+                    pokedex2[n] = pokeApi.getPokemon(n + 152);
+//            System.out.println(pokedex2[n]);
+//            System.out.println();
+                }
+                return pokedex2;
+            case 3:
+                Pokemon[] pokedex3 = new Pokemon[135];
+                for (int n = 0; n <= 134; n++) {
+                    pokedex3[n] = pokeApi.getPokemon(n + 252);
+//            System.out.println(pokedex3[n]);
+//            System.out.println();
+                }
+                return pokedex3;
+            case 4:
+                Pokemon[] pokedex4 = new Pokemon[107];
+                for (int n = 0; n <= 106; n++) {
+                    pokedex4[n] = pokeApi.getPokemon(n + 387);
+//                    System.out.println(pokedex4[n]);
+//                    System.out.println();
+                }
+                return pokedex4;
+            case 5:
+                Pokemon[] pokedex5 = new Pokemon[156];
+                for (int n = 0; n <= 155; n++) {
+                    pokedex5[n] = pokeApi.getPokemon(n + 494);
+//                    System.out.println(pokedex5[n]);
+//                    System.out.println();
+                }
+                return pokedex5;
+            case 6:
+                Pokemon[] pokedex6 = new Pokemon[72];
+                for (int n = 0; n <= 71; n++) {
+                    pokedex6[n] = pokeApi.getPokemon(n + 650);
+                    System.out.println(pokedex6[n]);
+                    System.out.println();
+                }
+                return pokedex6;
+            case 7:
+                Pokemon[] pokedex7 = new Pokemon[86];
+                for (int n = 0; n <= 85; n++) {
+                    pokedex7[n] = pokeApi.getPokemon(n + 722);
+                    System.out.println(pokedex7[n]);
+                    System.out.println();
+                }
+                return pokedex7;
+            default:
+                break;
+        }
+                return safeTest;
+        }
+    }
