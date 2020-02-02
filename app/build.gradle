@@ -18,6 +18,12 @@ android {
         }
     }
 }
+repositories {
+    maven { url 'http://jcenter.bintray.com' }
+}
+dependencies {
+    implementation 'me.sargunvohra.lib:pokekotlin:2.3.0'
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
