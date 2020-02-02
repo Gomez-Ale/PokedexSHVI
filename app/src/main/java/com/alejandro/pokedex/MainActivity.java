@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 t2v.setTextColor(Color.WHITE);
                 t2v.setGravity(Gravity.LEFT);
                 tbrow.addView(t2v);
-//                Image I3v = pokeList[n].getSprites().getFrontDefault();
-//                I3v.
+//                ImageView iv = (ImageView)findViewById(R.id.);
 //                t3v.setTextColor(Color.WHITE);
 //                t3v.setGravity(Gravity.CENTER);
 //                tbrow.addView(t3v);
